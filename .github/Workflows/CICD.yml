@@ -1,28 +1,25 @@
 name: CICD Pipeline
 
-on: 
- workflow_dispatch: 
- 
-jobs:
+on:
+  workflow_dispatch:
 
+jobs:
   code:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
-        run: echo "Coling the code from github"
-        
+      - name: Checkout code
+        run: echo "Cloning the code from GitHub"
+
   test:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: Test continue
         run: echo "Testing"
-        
+
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Deploying the app
         run: echo "Run the code"
-
-
-
-
