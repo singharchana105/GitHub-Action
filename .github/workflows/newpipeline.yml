@@ -1,4 +1,4 @@
-name: CICD Pipeline
+name: Dummy Pipeline
 on:
   workflow_dispatch:
    inputs:
