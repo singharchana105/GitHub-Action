@@ -1,8 +1,5 @@
 name: CICD
-
-on: 
- workflow_dispatch
-
+'on': workflow_dispatch
 jobs:
   code:
     runs-on: ubuntu-latest
@@ -10,18 +7,12 @@ jobs:
       - name: checkout code
         run: echo "Coling the code from github"
   test:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Test continue
-         run: echo "Testing"
-         
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test continue
+        run: echo "Testing"
   deploy:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Deploying the app
-         run: echo "Docker compose deploying the app"
-
-            
-   
-   
-  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the app
+        run: echo "Docker compose deploying the app"
