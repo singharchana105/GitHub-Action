@@ -10,11 +10,13 @@ jobs:
     steps:
       - name: checkout code
         run: echo "Coling the code from github"
+        
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Test continue
         run: echo "Testing"
+        
   deploy:
     runs-on: ubuntu-latest
     steps:
