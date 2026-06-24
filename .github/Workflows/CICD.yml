@@ -26,5 +26,3 @@ jobs:
 
 
 
-      
-        run: echo "Docker compose deploying the app"
