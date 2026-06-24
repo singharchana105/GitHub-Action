@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Build step
         run: echo "Building the code"
+        
 
   test:
     name: Test
@@ -32,6 +33,4 @@ jobs:
         uses: actions/checkout@v4
       - name: Deploy the app
         run: echo "Docker compose deploying the app"
-        # Example real deploy:
-        # run: |
-        #   docker compose -f docker-compose.yml up -d --build
+       
